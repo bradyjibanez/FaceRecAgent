@@ -9,7 +9,7 @@ while True:
 		if face is not None:
 			print("face found")
 			cv2.imwrite("face.jpg", face)
-			os.system("scp face.jpg brady@99.232.132.147:/home/brady/Documents/FACE/theImage"+str(count)+".jpg")
+			os.system("scp face.jpg brady@***.***.***.***:/home/brady/Documents/FACE/theImage"+str(count)+".jpg")
 			count += 1
 			time.sleep(2)
 	except FileNotFoundError:
