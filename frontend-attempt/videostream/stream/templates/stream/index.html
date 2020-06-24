@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+</head>
+
+<body>
+    <script>
+        window.onload = async function(){
+        let time = 1;
+            while(true){
+                const resdata  = await fetch("http://localhost:8000/stream/string/").then(
+                    response => response.json());
+                if(resdata.string == null){
+                    console.log("Null");
+                    document.getElementById('text-string').innerHTML = "Visitors: No data";
+                    // document.getElementById("image").style.display = "none";
+                    await sleep(1);
+                }else{
+                    console.log("Not null");
+                    document.getElementById('text-string').innerHTML = "Visitors: " + resdata.string;
+                    document.getElementById("image").style.display = "inherit";
+                    document.getElementById("image").src = "http://localhost:8000/stream/stream/";
+                    await sleep(1000);
+                }
+            }
+        }
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        
+    </script>
+    <style>
+        #container-title {
+            width: 100%;
+            display: inline-block;
+            margin: auto;
+            text-align: center;
+            /* background-color: aqua; */
+            top: 0;
+            left: 0;
+        }
+
+        #container-body {
+            width: 100%;
+            display: inline-block;
+            margin: auto;
+            text-align: center;
+            /* background-color: red; */
+            top: 0;
+            left: 0;
+        }
+        #image-container{
+            width:700px;
+            height: 300px;
+            margin: auto;
+            text-align: center;
+            /* background-color: black; */
+            margin-top: 10px;
+            padding:20px;
+            
+        }
+
+        video {
+            margin: auto;
+            display: inline-block;
+            padding: 20px;
+        }
+        img {
+            margin: auto;
+            display: inline-block;
+            max-height:100%;
+            max-width:100%;
+        }
+        body{
+            /* background-color: aquamarine; */
+            background: linear-gradient( to right, aqua, aquamarine);
+        }
+    </style>
+    <div id='container-title'>
+        <H1>{{title}}</H1>
+    </div>
+    <div id='container-body'>
+        <!-- <video width="400" controls>
+            <source src="{{video}}"" type=" video/mp4"> </video> -->
+        <div id="image-container">
+            <img src="" alt="Image" id="image" onerror="this.style.display='none'" >
+        </div>
+        <p id="text-string"></p>
+    </div>
+</body>
+
+</html>
