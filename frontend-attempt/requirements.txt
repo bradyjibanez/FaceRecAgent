@@ -21,7 +21,7 @@ Click==7.0
 click-datetime==0.2
 command-not-found==0.3
 constantly==15.1.0
-cryptography==1.2.3
+cryptography==3.2
 cycler==0.10.0
 daphne==2.2.5
 decorator==4.4.0
