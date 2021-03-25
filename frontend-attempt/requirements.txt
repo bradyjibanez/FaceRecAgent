@@ -86,7 +86,7 @@ python-debian==0.1.27
 python-systemd==231
 pytz==2018.9
 pyxdg==0.25
-PyYAML==3.11
+PyYAML==5.4
 redis==2.10.6
 reportlab==3.3.0
 requests==2.21.0
