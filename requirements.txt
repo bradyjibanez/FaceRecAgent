@@ -26,7 +26,7 @@ cycler==0.10.0
 daphne==2.2.5
 decorator==4.4.0
 defer==1.0.6
-Django==2.1.7
+Django==2.2.24
 dlib==19.17.0
 face-recognition==1.2.3
 face-recognition-models==0.3.0
