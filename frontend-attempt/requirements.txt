@@ -57,7 +57,7 @@ msgpack==0.6.1
 msgpack-python==0.5.6
 netifaces==0.10.9
 networkx==2.2
-numpy==1.16.2
+numpy==1.22.0
 oauthlib==1.0.3
 onboard==1.2.0
 opencv-python==4.0.0.21
