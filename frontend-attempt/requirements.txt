@@ -96,7 +96,7 @@ sessioninstaller==0.0.0
 six==1.12.0
 sklearn==0.0
 soupsieve==1.8
-spotipy==2.4.4
+spotipy==2.22.1
 ssh-import-id==5.5
 system-service==0.3
 tornado==6.0.1
